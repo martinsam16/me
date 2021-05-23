@@ -1,0 +1,30 @@
+{
+  "education_events": [
+    {
+      "yearRange": "2018 - 2021",
+      "business": "IESTP Valle Grande",
+      "position": "Technical Professional in System Analysis",
+      "description": "Higher education."
+    },
+    {
+      "yearRange": "2018",
+      "business": "Universidad de Piura - Centro Cultural AZOR",
+      "position": "PFE - Future Entrepreneurs Program",
+      "description": "It is a program that allowed me to have a general and integrated vision of a business organization, and to respond to the demands and opportunities that arise in the competitive environment, in an innovative and efficient way."
+    },
+    {
+      "yearRange": "2007 - 2017",
+      "business": "IEP Centro de Varones",
+      "description": "Primary School and High School."
+    }
+  ],
+  "experience_events": [
+    {
+      "yearRange": "2021 - present",
+      "business": "Everis",
+      "position": "Solution Analyst",
+      "description": "Backend Developer. Incident Resolver."
+    }
+  ]
+}
+

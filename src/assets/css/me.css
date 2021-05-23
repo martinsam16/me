@@ -27,7 +27,6 @@
     --light: #f8f9fa;
     --dark: #0e0f0f;
     --black: #000000;
-    --white: #ffffff;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -56,10 +55,10 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
     margin: 0;
-    font-family: "Mukta", sans-serif;
+    font-family: "Roboto Thin", sans-serif;
     font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
+    font-weight: 600;
+    line-height: 1.0;
     color: #000000;
     text-align: left;
     background-color: #f3f3f3;
@@ -11151,13 +11150,13 @@ main .section-title {
 
 main .section-subtitle {
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1;
     color: #0067f6;
 }
 
 main p {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.538;
     font-weight: 300;
 }
@@ -11203,7 +11202,7 @@ main .time-line-item::after {
     display: block;
     position: absolute;
     top: 0;
-    left: 0px;
+    left: 0;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -11224,7 +11223,7 @@ main .time-line-item:last-child {
 
 main .time-line-item .badge {
     padding: 6px 10px;
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1;
     border-radius: 2px;
@@ -11232,14 +11231,14 @@ main .time-line-item .badge {
 }
 
 main .time-line-item-title {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1;
     margin-bottom: 2px;
 }
 
 main .time-line-item-subtitle {
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.6;
     color: #a7a7a7;
@@ -11247,7 +11246,7 @@ main .time-line-item-subtitle {
 }
 
 main .time-line-item-content {
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 300;
     line-height: 1.6;
     margin-bottom: 0;

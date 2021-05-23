@@ -3,12 +3,20 @@
     <Navbar/>
     <div class="content-wrapper">
       <aside>
-        <Profile name="Martín Samán" degree="System Analyst"
-                 linkedin="https://www.linkedin.com/in/martinsamanarata"
-                 github="https://github.com/martinsam16"
-                 twitter="https://twitter.com/martinsaman"/>
-        <PersonalInformation location="Lima, Perú" birthday="16 October 2000"/>
+        <Profile :name="personal_information.short_name"
+                 :degree="personal_information.degree"
+                 :linkedin="personal_information.linkedin"
+                 :github="personal_information.github"
+                 :twitter="personal_information.twitter"/>
+        <PersonalInformation
+            :location="personal_information.location"
+            :birthday="personal_information.birthday"
+            :cv="personal_information.cv"/>
       </aside>
+      <main>
+        <Intro :description="personal_information.description"/>
+        <Resume/>
+      </main>
     </div>
   </div>
 </template>
@@ -20,13 +28,22 @@ import jQuery from 'jquery';
 import Navbar from "@/components/Navbar";
 import Profile from "@/components/Profile";
 import PersonalInformation from "@/components/PersonalInformation";
+import Intro from "@/components/Intro";
+import Resume from "@/components/Resume";
+
+import personal_information from './data/me.json';
 
 export default {
   name: 'App',
   components: {
+    Resume,
+    Intro,
     PersonalInformation,
     Profile,
     Navbar
+  },
+  data() {
+    return {personal_information};
   },
   mounted() {
     $('[data-toggle="collapsible-nav"]').on('click', function (e) {
@@ -95,6 +112,6 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap');
 @import 'assets/css/me.css';
 </style>

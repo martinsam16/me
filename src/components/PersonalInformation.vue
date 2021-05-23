@@ -2,10 +2,10 @@
   <div class="widget">
     <h5 class="widget-title">personal information</h5>
     <div class="widget-content">
-      <p>Birthday : {{ birthday}}</p>
-      <p>Location : {{location}}</p>
+      <p>Birthday : {{ birthday }}</p>
+      <p>Location : {{ location }}</p>
       <button class="btn btn-download-cv btn-primary rounded-pill"
-              onclick="window.location.href='https://bit.ly/3qiJQST'">
+              v-on:click="openResumeFile(cv)">
         <img src="../assets/images/download.svg"
              alt="download"
              class="btn-img">
@@ -20,7 +20,13 @@ export default {
   name: "PersonalInformation",
   props: {
     birthday: String,
-    location: String
+    location: String,
+    cv: String
+  },
+  methods: {
+    openResumeFile: (cv) => {
+      window.open(cv, '_blank');
+    }
   }
 }
 </script>
