@@ -1,7 +1,15 @@
 <template>
   <div id="app">
     <Navbar/>
-
+    <div class="content-wrapper">
+      <aside>
+        <Profile name="Martín Samán" degree="System Analyst"
+                 linkedin="https://www.linkedin.com/in/martinsamanarata"
+                 github="https://github.com/martinsam16"
+                 twitter="https://twitter.com/martinsaman"/>
+        <PersonalInformation location="Lima, Perú" birthday="16 October 2000"/>
+      </aside>
+    </div>
   </div>
 </template>
 
@@ -10,21 +18,25 @@
 import $ from 'jquery';
 import jQuery from 'jquery';
 import Navbar from "@/components/Navbar";
+import Profile from "@/components/Profile";
+import PersonalInformation from "@/components/PersonalInformation";
 
 export default {
   name: 'App',
   components: {
+    PersonalInformation,
+    Profile,
     Navbar
   },
   mounted() {
-    $('[data-toggle="collapsible-nav"]').on('click', function(e){
+    $('[data-toggle="collapsible-nav"]').on('click', function (e) {
       console.log(e);
       var target = ($(this).data('target'));
       $('#' + target).toggleClass('show');
     });
 
-    $(document).ready(function(){
-      if(window.innerWidth >= 992) {
+    $(document).ready(function () {
+      if (window.innerWidth >= 992) {
         $('#collapsible-nav').addClass('show');  //Show navigation menu in bigger screens by default.
       } else {
         $('#collapsible-nav').removeClass('show');
@@ -36,7 +48,7 @@ export default {
     });
 
     $(window).resize(
-        function() {
+        function () {
           if ($('.hover-box').length) {
             setHoverBoxPerspective();
           }
@@ -46,7 +58,7 @@ export default {
     function setHoverBoxPerspective() {
       $('.hover-box').css({
         'perspective': function () {
-          return Math.max( $(this).width(), $(this).height() ) * 2 + 50;
+          return Math.max($(this).width(), $(this).height()) * 2 + 50;
         }
       });
     }
@@ -57,8 +69,8 @@ export default {
     $('.hover-box').hover(
         function (event) {
           var direction = "up";
-          if(jQuery.fn.entry){ //Check if entry js file is loaded.
-            direction = $(this).entry({ e: event }); // Get mouse in direction.
+          if (jQuery.fn.entry) { //Check if entry js file is loaded.
+            direction = $(this).entry({e: event}); // Get mouse in direction.
           }
 
           $(this).removeClass(classNames.join(" ")); // Remove existing animation classes.
@@ -69,8 +81,8 @@ export default {
         function (event) {
 
           var direction = "up";
-          if(jQuery.fn.entry){
-            direction = $(this).entry({ e: event }); // Get mouse out direction.
+          if (jQuery.fn.entry) {
+            direction = $(this).entry({e: event}); // Get mouse out direction.
           }
 
           $(this).removeClass(classNames.join(" "));
@@ -83,6 +95,6 @@ export default {
 </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap');
-  @import 'assets/css/me.css';
+@import url('https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap');
+@import 'assets/css/me.css';
 </style>
