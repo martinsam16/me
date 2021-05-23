@@ -1,5 +1,5 @@
 # me
-My resume and portfolio
+My website
 
 ## Project setup
 ```
