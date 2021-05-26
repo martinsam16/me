@@ -11353,13 +11353,13 @@ main .testimonial-carousel .carousel-indicators li {
     border: 0;
 }
 
-main footer {
+footer {
     font-size: 10px;
     font-weight: 500;
     line-height: 1.2;
     padding-top: 5px;
     padding-bottom: 5px;
-    text-align: center;
+    text-align: right;
 }
 
 main .clients-section {

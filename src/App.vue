@@ -2,6 +2,7 @@
   <div id="app">
     <Navbar/>
     <router-view/>
+   <Footer/>
   </div>
 </template>
 
@@ -11,10 +12,11 @@ import Navbar from "@/components/Navbar";
 
 import $ from 'jquery';
 import jQuery from 'jquery';
+import Footer from "@/components/Footer";
 
 
 export default {
-  components: {Navbar},
+  components: {Footer, Navbar},
   mounted() {
     $('[data-toggle="collapsible-nav"]').on('click', function (e) {
       console.log(e);
@@ -38,6 +40,7 @@ export default {
           }
         }
     );
+
     function setHoverBoxPerspective() {
       $('.hover-box').css({
         'perspective': function () {
@@ -45,6 +48,7 @@ export default {
         }
       });
     }
+
     var classNames = ['in-up', 'in-right', 'in-down', 'in-left', 'out-up', 'out-right', 'out-down', 'out-left']; // Animation classes.
     $('.hover-box').hover(
         function (event) {
