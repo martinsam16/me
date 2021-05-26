@@ -5,6 +5,7 @@ import Portfolio from '../views/Portfolio.vue'
 import Blog from '../views/Blog.vue'
 import Learning from "@/views/Learning";
 import NotFound from "@/views/NotFound";
+import Preferences from "@/views/Preferences";
 
 Vue.use(VueRouter)
 
@@ -28,7 +29,13 @@ const routes = [
         path: '/blog',
         name: 'Blog',
         component: Blog
-    }, {
+    },
+    {
+        path: '/preferences',
+        name: 'Preferences',
+        component: Preferences
+    },
+    {
         path: '/:pathMatch(.*)*',
         component: NotFound
     }

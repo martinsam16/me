@@ -9,6 +9,7 @@
       <router-link to="/learning" class="nav-link">Learning</router-link>
       <router-link to="/portfolio" class="nav-link">Portfolio</router-link>
       <router-link to="/blog" class="nav-link">Blog</router-link>
+      <router-link to="/preferences" class="nav-link">⚙️</router-link>
     </nav>
     <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav"
             data-target="collapsible-nav"><img src="./../assets/images/hamburger.svg" alt="hamburger"></button>

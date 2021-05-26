@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
+    --background-color: #f3f3f3;
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -24,7 +25,8 @@
     --info: var(--cyan);
     --warning: var(--yellow);
     --danger: var(--red);
-    --light: #f8f9fa;
+    /*--light: #f8f9fa;*/
+    --light: var(--white);
     --dark: #0e0f0f;
     --black: #000000;
     --breakpoint-xs: 0;
@@ -34,6 +36,13 @@
     --breakpoint-xl: 1200px;
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --text-color: black;
+}
+
+[data-theme="darkMode"] {
+    --background-color: #192734;
+    --text-color: white;
+    --light: #2a3544;
 }
 
 *,
@@ -61,7 +70,7 @@ body {
     line-height: 1.0;
     color: var(--black);
     text-align: left;
-    background-color: #f3f3f3;
+    background-color: var(--background-color);
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -10856,6 +10865,7 @@ aside .profile-name {
     font-weight: 600;
     text-align: center;
     line-height: 30px;
+    color: var(--text-color);
 }
 
 aside .profile-designation {
@@ -10864,6 +10874,8 @@ aside .profile-designation {
     line-height: 20px;
     font-weight: 500;
     margin-bottom: 10px;
+    color: var(--text-color);
+    background-color: var(--light);
 }
 
 aside .social-links {
@@ -10877,7 +10889,7 @@ aside .social-links .social-link {
     line-height: 1;
     color: var(--primary);
     text-align: center;
-    background-color: var(--white);
+    background-color: var(--light);
     padding: 8px;
     width: 36px;
     height: 36px;
@@ -10899,18 +10911,22 @@ aside .widget .widget-title {
     font-weight: 500;
     text-transform: uppercase;
     margin-bottom: 10px;
+    color: var(--text-color);
 }
 
 aside .widget .widget-content {
     font-size: 13px;
+    color: var(--text-color);
 }
 
 aside .widget .widget-content p {
     margin-bottom: 5px;
+    color: var(--text-color);
 }
 
 aside .widget .widget-content p:last-of-type {
     margin-bottom: 10px;
+    color: var(--text-color);
 }
 
 aside .widget.card {
@@ -10931,6 +10947,8 @@ aside .widget.card .widget-title {
     font-weight: 500;
     line-height: 1.67;
     height: 30px;
+    color: var(--text-color);
+    background-color: var(--light);
 }
 
 .btn-share:hover, .btn-share:focus, .btn-share:active {
@@ -10952,6 +10970,7 @@ aside .widget.card .widget-title {
 }
 
 .btn-menu-toggle {
+    background-color: var(--light);
     padding: 12.5px 12.5px;
     width: 35px;
     height: 35px;
@@ -10965,7 +10984,6 @@ aside .widget.card .widget-title {
 }
 
 .btn-menu-toggle:hover, .btn-menu-toggle:focus, .btn-menu-toggle:active {
-    background-color: var(--white);
     border: 0;
 }
 
@@ -10993,7 +11011,7 @@ header {
     padding-left: 240px;
     padding-top: 16px;
     padding-bottom: 16px;
-    background-color: #f3f3f3;
+    background-color: var(--background-color);
     z-index: 1000;
 }
 
@@ -11008,6 +11026,7 @@ header {
 
 .collapsible-nav.show {
     width: 365px;
+    background-color: var(--background-color);
 }
 
 @media (max-width: 991px) {
@@ -11019,7 +11038,7 @@ header {
         flex-direction: column;
         top: 71px;
         align-items: flex-start;
-        background-color: var(--white);
+        background-color: var(--background-color);
         margin-right: 0;
         padding-left: 24px;
         padding-right: 24px;
@@ -11038,7 +11057,7 @@ header {
 .collapsible-nav .nav-link {
     font-size: 12px;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-color);
     text-transform: uppercase;
     padding: 2px 0;
     height: 24px;
@@ -11129,7 +11148,8 @@ main {
 
 main {
     padding: 36px 60px 24px;
-    background-color: var(--white);
+    background-color: var(--light);
+    color: var(--text-color);
     border-top-right-radius: 10px;
 }
 
@@ -11360,6 +11380,7 @@ footer {
     padding-top: 5px;
     padding-bottom: 5px;
     text-align: right;
+    color: var(--text-color);
 }
 
 main .clients-section {
@@ -11941,4 +11962,65 @@ main .location-section .map-wrapper {
     }
 }
 
-/*# sourceMappingURL=me.css.map */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--primary);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--primary);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
