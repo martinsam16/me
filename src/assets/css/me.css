@@ -11514,10 +11514,10 @@ main .portfolio-wrapper {
 }
 
 main .portfolio-wrapper .portfolio-item {
-    width: calc(25% - 10.5px);
+    width: calc(25% - 11px);
     height: 300px;
     margin-bottom: 15px;
-    background-color: #f2f2f2;
+    background-color: var(--light);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11771,13 +11771,13 @@ main .location-section .map-wrapper {
 }
 
 .hover-box.in-up .overlay {
-    transform-origin: 50% 0%;
+    transform-origin: 50% 0;
     -webkit-animation: in-up 300ms ease 0ms 1 forwards;
     animation: in-up 300ms ease 0ms 1 forwards;
 }
 
 .hover-box.in-right .overlay {
-    transform-origin: 100% 0%;
+    transform-origin: 100% 0;
     -webkit-animation: in-right 300ms ease 0ms 1 forwards;
     animation: in-right 300ms ease 0ms 1 forwards;
 }

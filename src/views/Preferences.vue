@@ -24,15 +24,13 @@ export default {
   components: {
     ProfileBox
   },
-  mounted() {
-    let localTheme = localStorage.getItem('theme');
-    this.theme = localTheme;
-    document.documentElement.setAttribute('data-theme', localTheme);
-  },
   data() {
     return {
       theme: ''
     };
+  },
+  mounted() {
+    this.theme = localStorage.getItem('theme');
   },
   methods: {
     toggleTheme

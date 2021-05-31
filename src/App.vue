@@ -2,25 +2,28 @@
   <div id="app">
     <Navbar/>
     <router-view/>
-   <Footer/>
+    <Footer/>
   </div>
 </template>
 
 
 <script>
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 import $ from 'jquery';
-import jQuery from 'jquery';
-import Footer from "@/components/Footer";
 
 
 export default {
   components: {Footer, Navbar},
   mounted() {
+
+    this.theme = localStorage.getItem('theme');
+    document.documentElement.setAttribute('data-theme', this.theme);
+
     $('[data-toggle="collapsible-nav"]').on('click', function (e) {
       console.log(e);
-      var target = ($(this).data('target'));
+      const target = ($(this).data('target'));
       $('#' + target).toggleClass('show');
     });
     $(document).ready(function () {
@@ -29,45 +32,7 @@ export default {
       } else {
         $('#collapsible-nav').removeClass('show');
       }
-      if ($('.hover-box').length) {
-        setHoverBoxPerspective();
-      }
     });
-    $(window).resize(
-        function () {
-          if ($('.hover-box').length) {
-            setHoverBoxPerspective();
-          }
-        }
-    );
-
-    function setHoverBoxPerspective() {
-      $('.hover-box').css({
-        'perspective': function () {
-          return Math.max($(this).width(), $(this).height()) * 2 + 50;
-        }
-      });
-    }
-
-    var classNames = ['in-up', 'in-right', 'in-down', 'in-left', 'out-up', 'out-right', 'out-down', 'out-left']; // Animation classes.
-    $('.hover-box').hover(
-        function (event) {
-          var direction = "up";
-          if (jQuery.fn.entry) { //Check if entry js file is loaded.
-            direction = $(this).entry({e: event}); // Get mouse in direction.
-          }
-          $(this).removeClass(classNames.join(" ")); // Remove existing animation classes.
-          $(this).addClass("in-" + direction); //Add mouse in animation
-        },
-        function (event) {
-          var direction = "up";
-          if (jQuery.fn.entry) {
-            direction = $(this).entry({e: event}); // Get mouse out direction.
-          }
-          $(this).removeClass(classNames.join(" "));
-          $(this).addClass("out-" + direction); //Add mouse out animation
-        }
-    );
   }
 }
 </script>
