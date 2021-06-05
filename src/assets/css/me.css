@@ -11277,33 +11277,13 @@ main .services-section {
 }
 
 main .service-card {
-    padding-top: 11px;
+    padding-top: 20px;
     padding-bottom: 11px;
 }
 
-main .service-card:first-child, main .service-card:nth-child(3) {
-    border-right: 1px solid #f3f3f3;
-}
-
-@media (max-width: 991px) {
-    main .service-card:first-child, main .service-card:nth-child(3) {
-        border-right: 0;
-    }
-}
-
-@media (max-width: 991px) {
-    main .service-card {
-        border-bottom: 1px solid #f3f3f3;
-    }
-
-    main .service-card:last-child {
-        border-bottom: 0;
-    }
-}
-
 main .service-card .service-icon {
-    width: 29.9px;
-    height: 29.9px;
+    width: 150px;
+    /*height: 29.9px;*/
     margin-right: 17.1px;
     display: flex;
     height: 100%;
@@ -11311,15 +11291,22 @@ main .service-card .service-icon {
     justify-content: center;
 }
 
+main .service-card .service-icon img {
+    width: 120px;
+    margin-right: 17.1px;
+    display: flex;
+    align-items: center;
+}
+
 main .service-card .service-title {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     line-height: 1;
     margin-bottom: 8px;
 }
 
 main .service-card .service-description {
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 300;
     max-width: 180px;
     margin-bottom: 0;
@@ -11435,7 +11422,8 @@ main .achievement-cards-wrapper {
     display: flex;
     justify-content: space-around;
     padding: 35px 15px;
-    background-color: #f7f7f9;
+    /*background-color: var(--light);*/
+    /*border-radius: 15px;*/
 }
 
 @media (max-width: 991px) {
@@ -11483,8 +11471,8 @@ main .achievement-cards-wrapper {
 }
 
 main .achievement-card-icon {
-    width: 30px;
-    height: 30px;
+    width: 150px;
+    /*height: 30px;*/
     margin-right: 10px;
 }
 

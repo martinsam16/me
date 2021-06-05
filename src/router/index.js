@@ -16,8 +16,8 @@ const routes = [
         component: Home
     },
     {
-        path: '/learning',
-        name: 'Learning',
+        path: '/knowledge',
+        name: 'Knowledge',
         component: Learning
     },
     {
