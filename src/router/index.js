@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Portfolio from '../views/Portfolio.vue'
-import Blog from '../views/Blog.vue'
+import Ideas from '../views/Ideas.vue'
 import Learning from "@/views/Learning";
 import NotFound from "@/views/NotFound";
 import Preferences from "@/views/Preferences";
@@ -26,9 +26,9 @@ const routes = [
         component: Portfolio
     },
     {
-        path: '/blog',
-        name: 'Blog',
-        component: Blog
+        path: '/ideas',
+        name: 'Ideas',
+        component: Ideas
     },
     {
         path: '/preferences',

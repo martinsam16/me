@@ -2,7 +2,7 @@
   <div class="content-wrapper">
     <ProfileBox/>
     <main>
-      Blog page
+      Ideas page 👷‍♂️
     </main>
   </div>
 </template>

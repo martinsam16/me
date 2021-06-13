@@ -14,6 +14,13 @@
             </a>
           </div>
           <div class="media achievement-card">
+            <a href="https://www.credly.com/badges/a40d6af2-d869-4a60-8005-7fba33d43305" target="_blank">
+              <img
+                  src="https://images.credly.com/size/340x340/images/bc08972c-3c7d-4b99-82a0-c94bcca36674/Badges_v8-07_Practitioner.png"
+                  alt="puzzle" class="achievement-card-icon">
+            </a>
+          </div>
+          <div class="media achievement-card">
             <a href="https://www.credly.com/badges/562f2b52-712b-46d6-bbbe-ab5e448d7b09" target="_blank">
               <img src="https://images.credly.com/size/340x340/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png"
                    alt="puzzle" class="achievement-card-icon">
