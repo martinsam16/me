@@ -1,0 +1,15 @@
+{
+  "portfolioItems": [
+    {
+      "projectName": "SADEB",
+      "projectDescription": "Sistema Académico Dirigido a la Educación Básica",
+      "projectCover": "https://raw.githubusercontent.com/martinsam16/resources/master/projects/sadeb.png"
+    },
+    {
+      "projectName": "iDoc",
+      "projectDescription": "Sistema de Trámite Documentario y Registro Civil",
+      "projectCover": "https://raw.githubusercontent.com/martinsam16/resources/master/projects/iDoc.png",
+      "projectUrl": "https://youtu.be/bGe9rb6EJ_s"
+    }
+  ]
+}
