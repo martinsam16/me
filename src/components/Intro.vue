@@ -4,7 +4,7 @@
     <p>
       {{ description }}
     </p>
-    <a href="mailto:martinsam1610@outlook.com" target="_blank" class="btn btn-primary btn-hire-me">HIRE ME</a>
+    <a href="mailto:martinsam1610@gmail.com" target="_blank" class="btn btn-primary btn-hire-me">HIRE ME</a>
   </section>
 </template>
 
